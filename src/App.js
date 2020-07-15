@@ -85,22 +85,24 @@ function App() {
     setTodos(newTodo);
   };
   return (
-    <div className='app'>
-      <div className='todoHead'>
-        <h1>Todo-List</h1>
-      </div>
+    <div className='App'>
+      <div className='app'>
+        <div className='todoHead'>
+          <h1>Todo-List</h1>
+        </div>
 
-      <div className='todo-list'>
-        {todos.map((todo, index) => (
-          <Todo
-            key={index}
-            index={index}
-            todo={todo}
-            completeTodo={completeTodo}
-            delTodo={delTodo}
-          />
-        ))}
-        <TodoForm addTodo={addTodo} />
+        <div className='todo-list'>
+          {todos.map((todo, index) => (
+            <Todo
+              key={index}
+              index={index}
+              todo={todo}
+              completeTodo={completeTodo}
+              delTodo={delTodo}
+            />
+          ))}
+          <TodoForm addTodo={addTodo} />
+        </div>
       </div>
     </div>
   );
